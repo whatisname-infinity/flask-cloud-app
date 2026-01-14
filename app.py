@@ -1,17 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 import datetime
+from datetime import timedelta
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    now = datetime.datetime.now()
-    current_time = now.strftime("%H:%M:%S")
-    return f"""
-    <h1>Hello,Amit! This is your Cloud App.</h1>
-    <p>The current time at the server is: <b>{current_time}</b></p>
-    <p>Refresh this page to see it change!</p>
-    """
+    now_utc = datetime.datetime.now()
+    now_ist = now_utc + timedelta(hours=5, minutes=30)
+    current_time = now_ist.strftime("%H:%M:%S")
+    return render_template('index.html',user_name="Amit", server_time=current_time)
 
 @app.route('/status')
 def status():
