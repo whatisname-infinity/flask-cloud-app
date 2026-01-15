@@ -1,0 +1,41 @@
+body {
+    background-color: #0d1117; /* GitHub Dark Mode Background */
+    color: #c9d1d9;            /* Soft White Text */
+    font-family: 'Courier New', Courier, monospace; /* Hacker Font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #161b22; /* Slightly lighter card */
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    color: #58a6ff; /* Blue Heading */
+    margin-bottom: 10px;
+}
+
+.status-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #0f2d1e; /* Dark Green bg */
+    border: 1px solid #2ea043; /* Green border */
+    border-radius: 6px;
+    color: #3fb950; /* Green text */
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #8b949e;
+}
